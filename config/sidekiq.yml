@@ -1,0 +1,8 @@
+---
+:concurrency: <%= ENV['RAILS_MAX_THREADS'] || 5 %>
+staging:
+  :concurrency: <%= ENV['RAILS_MAX_THREADS'] || 20 %>
+production:
+  :concurrency: <%= ENV['RAILS_MAX_THREADS'] || 20 %>
+:queues:
+  - ["default", 5]
